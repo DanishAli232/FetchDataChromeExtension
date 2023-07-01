@@ -1,0 +1,98 @@
+.container {
+  width: 400px;
+  color: #314d3e;
+  padding: "10px";
+}
+
+/* .title {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px;
+} */
+
+.textbox {
+  width: 100%;
+  font-size: 12px;
+  margin: 0;
+  padding: 0px 2px;
+}
+
+.textbox:focus {
+  outline: 0;
+  border-color: #66afe9;
+}
+
+.bookmarks {
+  margin: 5px 5px;
+  padding: 3px;
+}
+
+.bookmark {
+  display: flex;
+  border-bottom-color: #00254d;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-radius: 0.8rem;
+  padding: 3px;
+  padding-bottom: 7px;
+  margin-bottom: 7px;
+}
+
+.bookmark-title {
+  padding-left: 2px;
+}
+
+.bookmark-btn {
+  margin: 0 4px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+#nav-xshop {
+  background-color: #314d3e;
+}
+
+.bookmark-controls {
+  flex: auto;
+  text-align: right;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  margin-left: 8px;
+}
+
+.whole-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.whole-1 h5 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+.btn-product {
+  margin-top: 21px;
+  background: #2828f5fa;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  padding: 9px 20px;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.btn-product:hover {
+  background-color: #00254d;
+}
+
+.btn-product::selection {
+  transform: scale(1.1);
+}

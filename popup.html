@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src *;">
+    <title>Send Mail</title>
+
+    <link href="popup.css" rel="stylesheet" type="text/css" />
+    <script type="module" src="popup.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+    <script type="text/javascript">
+        function sendEmail() {
+            Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "mdanishawan165@gmail.com",
+                    Password: "ghostdanish098",
+                    To: 'balochdanish2020@gmail.com',
+                    From: "mdanishawan165@gmail.com",
+                    Subject: "Sending Email using javascript",
+                    Body: "Well that was easy!!",
+                })
+                .then(function(message) {
+                    alert("mail sent successfully")
+                    console.log('mail sent');
+                })
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <input type="button" value="Send Email" />
+        <div>
+            <div class='whole'>
+                <h2>Product Data</h2>
+            </div>
+            <div class="whole-1">
+                <h3>Title:</h3>
+                <h5 class="title"></h5>
+            </div>
+            <div class="">
+                <h3>Description:</h3>
+                <p class="description"></p>
+            </div>
+            <div class="whole-1">
+                <h3>Price:</h3>
+                <h5 class="price"></h5>
+            </div>
+            <div class="whole-1">
+                <h3>Rating:</h3>
+                <h5 class="rating"></h5>
+            </div>
+            <div class="whole-1">
+                <h3>Reviews:</h3>
+                <h5 class="reviews"></h5>
+            </div>
+            <div class="whole-1">
+                <h3>Image:</h3>
+                <img class="image" src='' />
+            </div>
+
+            <button class="btn-product" onclick="sendEmail()">Add Product</button>
+            <div class="bookmarks" id="bookmarks"></div>
+        </div>
+    </div>
+</body>
+
+</html>

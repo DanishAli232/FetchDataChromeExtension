@@ -1,0 +1,50 @@
+{
+    "name": "Amazon FetchData",
+    "version": "0.1.0",
+    "description": "FetchData from Amazon and paste into AugmentedRealityBasedEcommercePlatform",
+    "permissions": [
+        "storage",
+        "tabs",
+        "http://localhost/",
+        "https://smtpjs.com/v3/smtp.js"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [{
+        "matches": [
+            "https://*.amazon.com/*",
+            "https://*.aliexpress.com/*",
+            "http://localhost:3000/*"
+        ],
+        "js": ["contentScript.js"]
+    }],
+
+    "web_accessible_resources": [{
+        "resources": [
+            "assets/bookmark.png",
+            "assets/play.png",
+            "assets/delete.png",
+            "assets/save.png"
+        ],
+        "matches": [
+            "https://*.amazon.com/*",
+            "https://*.aliexpress.com/*",
+            "http://localhost:3000/*"
+        ]
+    }],
+    "action": {
+        "default_icon": {
+            "16": "assets/bookmark.png",
+            "24": "assets/bookmark.png",
+            "32": "assets/bookmark.png"
+        },
+        "default_title": "FetchData from Amazon",
+        "default_popup": "popup.html"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://smtpjs.com/v3/smtp.js;"
+    },
+
+    "manifest_version": 3
+}
